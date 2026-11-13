@@ -3,58 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Умар Сатывалдиев — практикант, системное администрирование</title>
+<title>Умар Сатывалдиев | Практикант, системное администрирование</title>
 <style>
-  :root{--bg:#f3f6f4;--ink:#16231f;--muted:#51625c;--accent:#0b6e5a;--line:#cfdad5;--card:#fff}
-  @media (prefers-color-scheme:dark){:root{--bg:#101a17;--ink:#e6efeb;--muted:#9bb0a8;--accent:#4fd1b0;--line:#26372f;--card:#16231f}}
+  :root{--bg:#0a0f12;--panel:#111a1f;--ink:#dbe7ea;--muted:#7f9399;--accent:#4dd0e1;--line:#1f2e35}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 Georgia,"Times New Roman",serif}
-  main{max-width:720px;margin:0 auto;padding:56px 22px 40px}
-  h1{font-size:clamp(2.2rem,7vw,3.4rem);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
-  .role{color:var(--accent);font:600 1.05rem/1.4 system-ui,sans-serif;margin:0 0 28px}
-  h2{font:600 1.1rem system-ui,sans-serif;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
-  p{margin:0 0 14px;max-width:62ch}
-  ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-  li{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font:.95rem/1.45 system-ui,sans-serif}
-  li b{display:block;font-size:1.02rem;margin-bottom:2px}
-  li span{color:var(--muted)}
-  dl{margin:0;font:1rem/1.6 system-ui,sans-serif}
-  dt{float:left;clear:left;width:110px;color:var(--muted)}
-  dd{margin:0 0 6px 110px}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 ui-monospace,"Cascadia Code",Consolas,Menlo,monospace}
+  main{max-width:860px;margin:0 auto;padding:48px 20px 40px}
+  .prompt{color:var(--accent);margin:0 0 18px;word-break:break-all}
+  .prompt span{color:var(--muted)}
+  h1{font-size:clamp(2rem,7vw,3.2rem);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+  .role{color:var(--accent);margin:0 0 22px}
+  p{margin:0 0 14px;max-width:68ch}
+  h2{font-size:1rem;margin:48px 0 16px;color:var(--accent);padding-bottom:8px;border-bottom:1px solid var(--line)}
+  h2::before{content:"# ";color:var(--muted)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:28px 0 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px}
+  .stat b{display:block;font-size:1.9rem;color:var(--accent);line-height:1.1}
+  .stat span{color:var(--muted);font-size:.85rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px}
+  .card h3{margin:0 0 6px;font-size:1.05rem}
+  .card p{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tags i{font-style:normal;font-size:.78rem;border:1px solid var(--line);border-radius:4px;padding:2px 8px;color:var(--ink)}
+  .card a{display:inline-block;margin-top:12px}
+  .skills{display:flex;flex-wrap:wrap;gap:8px}
+  .skills i{font-style:normal;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:6px 12px}
   a{color:var(--accent)}
-  footer{margin-top:56px;color:var(--muted);font:.9rem system-ui,sans-serif}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .links{display:flex;flex-wrap:wrap;gap:12px}
+  .links a{border:1px solid var(--accent);border-radius:6px;padding:9px 18px;text-decoration:none}
+  .links a:hover{background:var(--accent);color:var(--bg)}
+  footer{margin-top:56px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
 </style>
 </head>
 <body>
 <main>
+  <p class="prompt">satyvaldiev@practice:~$ <span>cat about.txt</span></p>
   <h1>Умар Сатывалдиев</h1>
-  <p class="role">Практикант по системному администрированию, учусь работать с Linux и контейнерами</p>
+  <p class="role">Практикант | системное администрирование | Linux, Docker, Nginx</p>
+  <p>Учусь проектировать и поддерживать сервисы на Linux-сервере. Мне интересно, как устроен путь от запроса в браузере до ответа сервера: DNS, порты, контейнеры и веб-сервер. На практике собираю и разворачиваю свои проекты в Docker и автоматизирую рутину скриптами.</p>
 
-  <h2>Обо мне</h2>
-  <p>Интересуюсь тем, как устроены серверы и сети: что происходит между нажатием Enter в браузере и появлением страницы.</p>
-  <p>На практике учусь самостоятельно разворачивать и поддерживать сервисы на Linux-сервере. Эта страница работает в Docker-контейнере под управлением Nginx.</p>
+  <div class="stats">
+    <div class="stat"><b>6</b><span>технологий в работе</span></div>
+    <div class="stat"><b>1</b><span>сервис в контейнере</span></div>
+    <div class="stat"><b>1 команда</b><span>для обновления сайта</span></div>
+  </div>
 
-  <h2>Что умею и изучаю</h2>
-  <ul>
-    <li><b>Linux</b><span>Работаю в терминале, права доступа, ssh.</span></li>
-    <li><b>Docker и Compose</b><span>Собираю образы, запускаю контейнеры, пробрасываю порты.</span></li>
-    <li><b>Nginx</b><span>Отдаю статику, настраиваю конфигурацию.</span></li>
-    <li><b>Cron и скрипты</b><span>Пишу bash-скрипты, запускаю по расписанию.</span></li>
-    <li><b>Git</b><span>Веду репозиторий, работаю с удалённым origin.</span></li>
-    <li><b>HTML и CSS</b><span>Верстаю простые страницы, например эту.</span></li>
-  </ul>
+  <h2>Живые узлы</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Эта страница</h3>
+      <p>Работает на моём сервере в контейнере Nginx, доступна по порту 8034.</p>
+      <div class="tags"><i>Docker</i><i>Nginx</i><i>Compose</i></div>
+    </div>
+  </div>
 
-  <h2>Цели на практику</h2>
-  <p>Разобраться с Docker Compose, настроить автоматический деплой скриптом и получить общее представление о Kubernetes.</p>
+  <h2>Проекты</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Визитка в Docker</h3>
+      <p>Статический сайт в контейнере Nginx. Сборка по Dockerfile, запуск через Compose, проверка живости по адресу /health, обновление скриптом deploy.sh.</p>
+      <div class="tags"><i>Docker</i><i>Compose</i><i>Nginx</i><i>Bash</i><i>Git</i></div>
+      <a href="https://github.com/qwert235232/visitka">Код на GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Автодеплой по Cron</h3>
+      <p>В планах: запуск deploy.sh по расписанию и резервное копирование конфигов.</p>
+      <div class="tags"><i>Cron</i><i>Bash</i><i>Linux</i></div>
+    </div>
+  </div>
 
-  <h2>Контакты</h2>
-  <dl>
-    <dt>Telegram</dt><dd><a href="https://t.me/S_U_Z1">@S_U_Z1</a></dd>
-    <dt>GitHub</dt><dd><a href="https://github.com/qwert235232">github.com/qwert235232</a></dd>
-  </dl>
+  <h2>Арсенал</h2>
+  <div class="skills">
+    <i>Linux</i><i>Docker</i><i>Docker Compose</i><i>Nginx</i><i>Bash</i><i>Cron</i><i>Git</i><i>HTML/CSS</i><i>DNS и сети</i>
+  </div>
 
-  <footer>Страница отдаётся контейнером Docker с Nginx.</footer>
+  <h2>Связаться</h2>
+  <div class="links">
+    <a href="https://t.me/S_U_Z1">Написать в Telegram</a>
+    <a href="https://github.com/qwert235232">GitHub</a>
+  </div>
+
+  <footer>satyvaldiev@practice:~$ docker compose up -d | Nginx в контейнере, порт 8034</footer>
 </main>
 </body>
 </html>
-
